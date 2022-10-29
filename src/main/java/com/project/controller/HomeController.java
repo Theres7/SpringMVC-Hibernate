@@ -16,8 +16,8 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model){
-        List<User> userList = service.loadUsers();
-        model.addAttribute( "users",userList );
+        List<User> users = service.loadUsers();
+        model.addAttribute( "users",users );
         model.addAttribute( "title","User Registration and Login" );
         return "home";
     }
